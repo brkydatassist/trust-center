@@ -198,13 +198,12 @@
       n.textContent = SITE.brand.logoAccent;
     });
 
-    // Sidebar bölüm menüsü (scroll-spy)
-    var nav = $("#sideNav");
+    // Üst menü
+    var nav = $("#mainNav");
     nav.innerHTML = "";
     DATA.nav.items.forEach(function (it) {
       var a = el("a", null, esc(it.label));
       a.href = "#" + it.id;
-      a.setAttribute("data-target", it.id);
       nav.appendChild(a);
     });
 
@@ -212,10 +211,6 @@
     var cta = $("#headerCta");
     cta.textContent = DATA.nav.cta.label;
     cta.href = "#" + DATA.nav.cta.target;
-
-    // Sidebar talep butonu
-    var sreq = $("#sideRequest");
-    if (sreq) { sreq.textContent = DATA.nav.cta.label; sreq.href = "#" + DATA.nav.cta.target; }
 
     // Lang toggle
     var lt = $("#langToggle");
@@ -269,7 +264,6 @@
 
     setupFaqLang();
     observeReveal();
-    updateActiveNav();
   }
 
   /* FAQ dil değişiminde açık kalanları resetle */
@@ -396,25 +390,20 @@
     var header = $("#siteHeader");
     window.addEventListener("scroll", function () {
       header.classList.toggle("scrolled", window.scrollY > 8);
-      updateActiveNav();
     });
+    var burger = $("#navBurger");
+    var nav = $("#mainNav");
+    if (burger && nav) {
+      burger.addEventListener("click", function () {
+        var open = nav.classList.toggle("open");
+        burger.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+      nav.addEventListener("click", function (e) {
+        if (e.target.tagName === "A") { nav.classList.remove("open"); burger.setAttribute("aria-expanded", "false"); }
+      });
+    }
     $("#langToggle").addEventListener("click", function () {
       setLocale(locale === "tr" ? "en" : "tr");
-    });
-  }
-
-  /* Sidebar scroll-spy: görünürdeki bölüme göre aktif linki işaretle */
-  function updateActiveNav() {
-    var links = document.querySelectorAll("#sideNav a");
-    if (!links.length) return;
-    var pos = window.scrollY + 140;
-    var currentId = null;
-    links.forEach(function (a) {
-      var sec = document.getElementById(a.getAttribute("data-target"));
-      if (sec && sec.offsetTop <= pos) currentId = a.getAttribute("data-target");
-    });
-    links.forEach(function (a) {
-      a.classList.toggle("active", a.getAttribute("data-target") === currentId);
     });
   }
 

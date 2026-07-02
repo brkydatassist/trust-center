@@ -22,9 +22,13 @@
         <span class="brand-divider" aria-hidden="true"></span>
         <span class="brand-accent" data-i18n="brand.accent"></span>
       </a>
+      <nav class="main-nav" id="mainNav" aria-label="Ana menü"></nav>
       <div class="header-actions">
         <button class="lang-toggle" id="langToggle" type="button" aria-label="Change language"></button>
         <a class="btn btn-primary btn-sm" id="headerCta" href="#documents"></a>
+        <button class="nav-burger" id="navBurger" type="button" aria-label="Menü" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </header>
@@ -42,22 +46,21 @@
       <div class="hero-glow" aria-hidden="true"></div>
     </section>
 
-    <!-- İçerik gövdesi: sol sabit panel + sağ içerik (SafeBase düzeni) -->
-    <div class="tc-wrap">
-      <div class="tc-body container">
-        <aside class="tc-sidebar">
-          <div class="side-card">
-            <p class="side-card-title" id="heroCardTitle"></p>
-            <div class="side-badges" id="heroBadges"></div>
-            <p class="side-note" id="heroCardNote"></p>
+    <!-- Uyumluluk şeridi (hero ile içeriğin sınırında, öne çıkan) -->
+    <div class="compliance-strip">
+      <div class="container">
+        <div class="strip-card">
+          <div class="strip-head">
+            <span class="strip-title" id="heroCardTitle"></span>
+            <span class="strip-note" id="heroCardNote"></span>
           </div>
-          <nav class="side-nav" id="sideNav" aria-label="Bölümler"></nav>
-          <a class="btn btn-primary side-request" id="sideRequest" href="#documents"></a>
-        </aside>
-        <!-- Dynamic sections injected here -->
-        <div class="tc-content" id="sections"></div>
+          <div class="strip-badges" id="heroBadges"></div>
+        </div>
       </div>
     </div>
+
+    <!-- Dynamic sections injected here -->
+    <div id="sections"></div>
   </main>
 
   <!-- Footer -->
