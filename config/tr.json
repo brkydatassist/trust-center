@@ -1,0 +1,447 @@
+{
+  "meta": {
+    "title": "Datassist Güven Merkezi | Bilgi Güvenliği & Veri Gizliliği",
+    "description": "Datassist Güven Merkezi — bilgi güvenliği sertifikalarımız, veri gizliliği uygulamalarımız, güvenlik kontrollerimiz ve uyumluluk belgelerimiz tek bir yerde.",
+    "langLabel": "TR",
+    "switchTo": "EN"
+  },
+  "nav": {
+    "items": [
+      {
+        "id": "documents",
+        "label": "Belgeler"
+      },
+      {
+        "id": "controls",
+        "label": "Güvenlik Duruşu"
+      },
+      {
+        "id": "certifications",
+        "label": "Sertifikalar"
+      },
+      {
+        "id": "privacy",
+        "label": "Veri Gizliliği"
+      },
+      {
+        "id": "subprocessors",
+        "label": "Alt İşleyenler"
+      },
+      {
+        "id": "faq",
+        "label": "SSS"
+      }
+    ],
+    "cta": {
+      "label": "Belge Talep Et",
+      "target": "documents"
+    }
+  },
+  "hero": {
+    "eyebrow": "",
+    "title": "Datassist Güven Merkezi",
+    "subtitle": "En hassas ve kritik verilerinizi her seviyede gizli ve özel olarak koruyoruz. Bilgi güvenliği sertifikalarımıza, güvenlik kontrollerimize ve uyumluluk belgelerimize buradan ulaşabilirsiniz.",
+    "primaryCta": {
+      "label": "Belge Talep Et",
+      "target": "documents"
+    },
+    "secondaryCta": {
+      "label": "Güvenlik Duruşu",
+      "target": "controls"
+    },
+    "updated": "Son güncelleme: Temmuz 2026",
+    "compliance": {
+      "title": "Uyumluluk & Sertifikalar",
+      "note": "Bağımsız kuruluşlarca denetlenmiş ve belgelendirilmiştir.",
+      "badges": [
+        "ISO 27001:2022",
+        "ISO 9001:2015",
+        "ISO 14001:2015",
+        "ISAE 3402",
+        "SOC II",
+        "KVKK",
+        "GDPR"
+      ]
+    }
+  },
+  "sections": [
+    {
+      "type": "documents",
+      "id": "documents",
+      "eyebrow": "Belgeler & Kaynaklar",
+      "title": "Uyumluluk belgelerimize erişin",
+      "description": "Aşağıdaki belgeler talep üzerine paylaşılır. Erişim için ilgili belgeyi seçerek talep oluşturabilirsiniz.",
+      "requestNote": "Bazı belgeler gizlilik sözleşmesi (NDA) gerektirebilir.",
+      "items": [
+        {
+          "name": "ISO 27001:2022 Sertifikası",
+          "type": "PDF",
+          "access": "public"
+        },
+        {
+          "name": "ISO 9001:2015 Sertifikası",
+          "type": "PDF",
+          "access": "public"
+        },
+        {
+          "name": "ISO 14001:2015 Sertifikası",
+          "type": "PDF",
+          "access": "public"
+        },
+        {
+          "name": "ISAE 3402 Denetim Raporu",
+          "type": "PDF",
+          "access": "nda"
+        },
+        {
+          "name": "SOC II Denetim Raporu",
+          "type": "PDF",
+          "access": "nda"
+        },
+        {
+          "name": "Bilgi Güvenliği Politikası",
+          "type": "PDF",
+          "access": "request"
+        },
+        {
+          "name": "KVKK Aydınlatma Metni",
+          "type": "PDF",
+          "access": "public"
+        },
+        {
+          "name": "İş Sürekliliği Özeti",
+          "type": "PDF",
+          "access": "request"
+        }
+      ],
+      "labels": {
+        "public": "Herkese Açık",
+        "nda": "NDA Gerekli",
+        "request": "Talep Üzerine",
+        "requestBtn": "Talep Et",
+        "downloadBtn": "İndir"
+      }
+    },
+    {
+      "type": "controls",
+      "id": "controls",
+      "eyebrow": "Güvenlik Duruşu",
+      "title": "Çok katmanlı güvenlik mimarisi",
+      "description": "Verilerinizi korumak için altyapı, uygulama, organizasyon ve süreç seviyelerinde uçtan uca kontroller uygularız. Her kategorinin detaylarını görüntüleyebilirsiniz.",
+      "detailLabel": "Detayları Gör",
+      "countLabel": "kontrol",
+      "groups": [
+        {
+          "title": "Altyapı Güvenliği",
+          "icon": "server",
+          "summary": "Sunucu, ağ ve barındırma katmanında çok katmanlı koruma.",
+          "controls": [
+            {
+              "name": "Web Uygulama Güvenlik Duvarı (WAF)",
+              "desc": "Tüm dış erişim noktaları, uygulama katmanı saldırılarına karşı Web Uygulama Güvenlik Duvarları ile korunur."
+            },
+            {
+              "name": "Güvenli Veri Merkezleri",
+              "desc": "Veriler Türkiye'de farklı coğrafi lokasyonlardaki güvenli veri merkezlerinde barındırılır."
+            },
+            {
+              "name": "Yedekli Yedekleme Altyapısı",
+              "desc": "Kritik veriler için yedekli (redundant) yedekleme altyapısı ile veri kaybı riski en aza indirilir."
+            },
+            {
+              "name": "Ağ Segmentasyonu",
+              "desc": "Ağ segmentasyonu ve güvenlik duvarı politikalarıyla sistemler arası erişim sınırlandırılır."
+            }
+          ]
+        },
+        {
+          "title": "Uygulama & Ürün Güvenliği",
+          "icon": "shield",
+          "summary": "Uygulama yaşam döngüsü boyunca güvenlik ve şifreleme.",
+          "controls": [
+            {
+              "name": "Sızma Testleri",
+              "desc": "Bağımsız üçüncü taraflar tarafından düzenli sızma (penetrasyon) testleri yürütülür."
+            },
+            {
+              "name": "Uçtan Uca Şifreleme",
+              "desc": "Veriler hem aktarımda (in transit) hem de saklamada (at rest) şifrelenir."
+            },
+            {
+              "name": "Güvenli Geliştirme (SDLC)",
+              "desc": "Yazılım geliştirme süreçlerinde güvenli kodlama ve kod gözden geçirme uygulamaları izlenir."
+            },
+            {
+              "name": "Güvenlik Açığı Yönetimi",
+              "desc": "Güvenlik açıkları önceliklendirilerek giderilir ve sistemler düzenli olarak güncellenir."
+            }
+          ]
+        },
+        {
+          "title": "İzleme & Olay Yönetimi",
+          "icon": "activity",
+          "summary": "7/24 izleme ve tanımlı olay müdahale süreçleri.",
+          "controls": [
+            {
+              "name": "7/24 Güvenlik İzleme",
+              "desc": "Sistemler kesintisiz olarak izleme ve gözetim altında tutulur."
+            },
+            {
+              "name": "Merkezi Log Yönetimi",
+              "desc": "Log kayıtları merkezi olarak toplanır ve güvenlik analizine tabi tutulur."
+            },
+            {
+              "name": "Olay Müdahale",
+              "desc": "Tanımlı olay müdahale (incident response) prosedürleri ile olaylara hızlı yanıt verilir."
+            },
+            {
+              "name": "Anormallik Tespiti",
+              "desc": "Anormallik tespiti ve uyarı mekanizmalarıyla şüpheli aktiviteler erken yakalanır."
+            }
+          ]
+        },
+        {
+          "title": "İş Sürekliliği & Kurtarma",
+          "icon": "refresh",
+          "summary": "Kesinti ve felaket senaryolarına karşı hazırlık.",
+          "controls": [
+            {
+              "name": "İş Sürekliliği Planı (BCP)",
+              "desc": "İş Sürekliliği Planları operasyonel dayanıklılığı güvence altına alır."
+            },
+            {
+              "name": "Felaket Kurtarma Planı (DRP)",
+              "desc": "Felaket Kurtarma Planları acil durum senaryolarına hazırlığı sağlar."
+            },
+            {
+              "name": "Yedekleme Testleri",
+              "desc": "Yedekleme ve geri yükleme süreçleri düzenli olarak test edilir."
+            },
+            {
+              "name": "Süreklilik Gözden Geçirmeleri",
+              "desc": "Hizmet sürekliliği hedefleri periyodik olarak gözden geçirilir."
+            }
+          ]
+        },
+        {
+          "title": "Organizasyonel Güvenlik",
+          "icon": "users",
+          "summary": "İnsan, süreç ve denetim odaklı güvenlik yönetimi.",
+          "controls": [
+            {
+              "name": "SOC II Denetimleri",
+              "desc": "Periyodik olarak bağımsız SOC II güvenlik denetimleri yürütülür."
+            },
+            {
+              "name": "Farkındalık Eğitimleri",
+              "desc": "Çalışanlara düzenli bilgi güvenliği farkındalık eğitimleri verilir."
+            },
+            {
+              "name": "Gizlilik Sözleşmeleri",
+              "desc": "Gizlilik sözleşmeleri ve rol bazlı sorumluluklar tanımlıdır."
+            },
+            {
+              "name": "Risk Değerlendirme",
+              "desc": "ISO 27001 çerçevesinde düzenli risk değerlendirme süreçleri işletilir."
+            }
+          ]
+        },
+        {
+          "title": "Erişim Yönetimi",
+          "icon": "lock",
+          "summary": "En az yetki ve güçlü kimlik doğrulama ile erişim kontrolü.",
+          "controls": [
+            {
+              "name": "Rol Bazlı Erişim (RBAC)",
+              "desc": "Rol bazlı erişim kontrolü ve en az yetki prensibi uygulanır."
+            },
+            {
+              "name": "Çok Faktörlü Kimlik Doğrulama",
+              "desc": "Kritik sistemlerde çok faktörlü kimlik doğrulama (MFA) zorunludur."
+            },
+            {
+              "name": "Yetki Gözden Geçirme",
+              "desc": "Erişim yetkileri düzenli aralıklarla gözden geçirilir."
+            },
+            {
+              "name": "Ayrıcalıklı Hesap Denetimi",
+              "desc": "Ayrıcalıklı hesaplar sürekli izlenir ve denetlenir."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "certifications",
+      "id": "certifications",
+      "eyebrow": "Uyumluluk & Sertifikalar",
+      "title": "Bağımsız denetimlerle doğrulanmış güvenlik",
+      "description": "Güvenlik ve kalite standartlarımız, akredite kuruluşlar tarafından periyodik olarak denetlenir ve belgelendirilir.",
+      "items": [
+        {
+          "code": "ISO 27001:2022",
+          "name": "Bilgi Güvenliği Yönetim Sistemi",
+          "description": "Bilgi varlıklarının gizliliği, bütünlüğü ve erişilebilirliğini güvence altına alan uluslararası standart.",
+          "status": "Sertifikalı"
+        },
+        {
+          "code": "ISO 9001:2015",
+          "name": "Kalite Yönetim Sistemi",
+          "description": "Süreç kalitesi ve sürekli iyileştirmeyi temel alan yönetim standardı.",
+          "status": "Sertifikalı"
+        },
+        {
+          "code": "ISO 14001:2015",
+          "name": "Çevre Yönetim Sistemi",
+          "description": "Çevresel etkilerin sistematik yönetimini kapsayan standart.",
+          "status": "Sertifikalı"
+        },
+        {
+          "code": "ISAE 3402",
+          "name": "Hizmet Organizasyonu Kontrolleri",
+          "description": "Hizmet organizasyonlarındaki iç kontrollerin bağımsız denetim raporu.",
+          "status": "Denetimli"
+        },
+        {
+          "code": "SOC II",
+          "name": "Güvenlik Denetimi",
+          "description": "Bağımsız denetçiler tarafından periyodik olarak yürütülen güvenlik denetimi.",
+          "status": "Denetimli"
+        },
+        {
+          "code": "KVKK & GDPR",
+          "name": "Kişisel Veri Koruma Uyumu",
+          "description": "Kişisel verilerin işlenmesinde yasal düzenlemelere tam uyum.",
+          "status": "Uyumlu"
+        }
+      ]
+    },
+    {
+      "type": "privacy",
+      "id": "privacy",
+      "eyebrow": "Veri Gizliliği",
+      "title": "Kişisel verilerinize saygı ve şeffaflık",
+      "description": "Bordro ve insan kaynakları süreçlerinde işlenen kişisel verileri, KVKK ve GDPR düzenlemelerine tam uyumla koruruz.",
+      "cards": [
+        {
+          "icon": "map-pin",
+          "title": "Veri Yerleşimi",
+          "text": "Verileriniz Türkiye sınırları içindeki farklı coğrafi lokasyonlarda bulunan güvenli sunucularda barındırılır."
+        },
+        {
+          "icon": "file-check",
+          "title": "Yasal Uyum",
+          "text": "6698 sayılı KVKK ve AB Genel Veri Koruma Tüzüğü (GDPR) kapsamındaki tüm yükümlülüklere uyum sağlanır."
+        },
+        {
+          "icon": "eye",
+          "title": "Şeffaflık",
+          "text": "Verilerin hangi amaçla, ne kadar süre ve kimlerle paylaşıldığı aydınlatma metinleri ile açıkça belirtilir."
+        },
+        {
+          "icon": "shield-check",
+          "title": "Gizlilik",
+          "text": "Hassas ve kritik verileriniz her seviyede gizli ve özel olarak, sıkı erişim kontrolleriyle korunur."
+        }
+      ]
+    },
+    {
+      "type": "subprocessors",
+      "id": "subprocessors",
+      "eyebrow": "Alt İşleyenler",
+      "title": "Hizmet aldığımız alt işleyenler",
+      "description": "Hizmetlerimizi sunarken kullandığımız temel alt işleyenler ve amaçları aşağıda listelenmiştir.",
+      "columns": [
+        "Sağlayıcı",
+        "Amaç",
+        "Veri Konumu"
+      ],
+      "rows": [
+        [
+          "Barındırma & Veri Merkezi",
+          "Uygulama barındırma ve depolama",
+          "Türkiye"
+        ],
+        [
+          "Yedekleme Altyapısı",
+          "Yedekli veri saklama",
+          "Türkiye"
+        ],
+        [
+          "İzleme & Log Yönetimi",
+          "Güvenlik izleme ve loglama",
+          "Türkiye"
+        ],
+        [
+          "E-posta & İletişim",
+          "Kurumsal iletişim",
+          "Türkiye / AB"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "faq",
+      "eyebrow": "Sıkça Sorulan Sorular",
+      "title": "Merak edilenler",
+      "items": [
+        {
+          "q": "Verilerim nerede saklanıyor?",
+          "a": "Verileriniz Türkiye sınırları içindeki farklı coğrafi lokasyonlarda bulunan güvenli sunucularda saklanır. Kritik veriler için yedekli yedekleme altyapısı kullanılır."
+        },
+        {
+          "q": "Hangi sertifikalara sahipsiniz?",
+          "a": "ISO 27001:2022, ISO 9001:2015 ve ISO 14001:2015 sertifikalarına sahibiz. Ayrıca ISAE 3402 ve SOC II kapsamında bağımsız denetimlerden geçiyoruz."
+        },
+        {
+          "q": "KVKK ve GDPR uyumluluğunuz nasıl sağlanıyor?",
+          "a": "Kişisel verilerin işlenmesinde 6698 sayılı KVKK ve GDPR düzenlemelerine tam uyum sağlanır. Aydınlatma metinleri, veri işleme sözleşmeleri ve saklama süreçleri bu çerçevede yönetilir."
+        },
+        {
+          "q": "Güvenlik açıklarını nasıl yönetiyorsunuz?",
+          "a": "Üçüncü taraflarca düzenli sızma testleri yürütülür, güvenlik açıkları önceliklendirilerek giderilir ve sistemler düzenli olarak güncellenir."
+        },
+        {
+          "q": "Bir güvenlik olayını nasıl bildirebilirim?",
+          "a": "Güvenlikle ilgili endişelerinizi kvkk@datassist.com adresi üzerinden bize iletebilirsiniz. Olay müdahale prosedürlerimiz kapsamında en kısa sürede değerlendirilir."
+        },
+        {
+          "q": "Uyumluluk belgelerine nasıl erişebilirim?",
+          "a": "Belgeler bölümünden ilgili belgeyi seçerek talep oluşturabilirsiniz. Bazı belgeler için gizlilik sözleşmesi (NDA) gerekebilir."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "id": "contact",
+      "title": "Bir sorunuz mu var?",
+      "description": "Bilgi güvenliği ve veri gizliliği ekibimiz sorularınızı yanıtlamaktan memnuniyet duyar.",
+      "primaryCta": {
+        "label": "İletişime Geç",
+        "href": "mailto:kvkk@datassist.com"
+      },
+      "secondaryCta": {
+        "label": "datassist.com",
+        "href": "https://datassist.com"
+      }
+    }
+  ],
+  "footer": {
+    "tagline": "Dünyanın en iyi yerel bordro servis sağlayıcısı.",
+    "copyright": "© 2026 Datassist. Tüm hakları saklıdır.",
+    "links": [
+      {
+        "label": "Ana Site",
+        "href": "https://datassist.com"
+      },
+      {
+        "label": "Bilgi Güvenliği",
+        "href": "https://datassist.com/teknolojiler/bilgi-guvenligi-veri-gizliligi/"
+      },
+      {
+        "label": "İletişim",
+        "href": "mailto:kvkk@datassist.com"
+      }
+    ]
+  }
+}

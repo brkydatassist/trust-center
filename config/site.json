@@ -1,0 +1,32 @@
+{
+  "defaultLocale": "tr",
+  "locales": ["tr", "en"],
+  "brand": {
+    "name": "Datassist",
+    "logoText": "Datassist",
+    "logoAccent": "Trust Center",
+    "domain": "trust.datassist.com",
+    "url": "https://datassist.com",
+    "phone": "444 4 923",
+    "email": "kvkk@datassist.com"
+  },
+  "theme": {
+    "colors": {
+      "navy": "#17324A",
+      "navyDeep": "#0C2740",
+      "navySoft": "#1E73BE",
+      "blue": "#1E73BE",
+      "orange": "#FF6716",
+      "orangeDark": "#E2560B",
+      "ink": "#26333D",
+      "muted": "#5B6B7B",
+      "line": "#E4EAF0",
+      "surface": "#F5F8FB",
+      "white": "#FFFFFF",
+      "green": "#12A37A"
+    },
+    "font": "'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif",
+    "radius": "14px",
+    "maxWidth": "1180px"
+  }
+}

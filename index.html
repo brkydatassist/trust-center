@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Datassist Güven Merkezi — bilgi güvenliği, veri gizliliği ve uyumluluk." />
+  <title>Datassist Güven Merkezi</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/datassist-icon.png" />
+  <link rel="apple-touch-icon" href="assets/img/datassist-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Datassist Trust Center">
+        <img class="brand-logo" src="assets/img/datassist-logo.png" alt="Datassist" />
+        <span class="brand-divider" aria-hidden="true"></span>
+        <span class="brand-accent" data-i18n="brand.accent"></span>
+      </a>
+      <div class="header-actions">
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Change language"></button>
+        <a class="btn btn-primary btn-sm" id="headerCta" href="#documents"></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="container hero-main">
+        <p class="eyebrow" id="heroEyebrow"></p>
+        <h1 id="heroTitle"></h1>
+        <p class="hero-sub" id="heroSub"></p>
+        <div class="hero-cta" id="heroCta"></div>
+        <p class="hero-updated" id="heroUpdated"></p>
+      </div>
+      <div class="hero-glow" aria-hidden="true"></div>
+    </section>
+
+    <!-- İçerik gövdesi: sol sabit panel + sağ içerik (SafeBase düzeni) -->
+    <div class="tc-wrap">
+      <div class="tc-body container">
+        <aside class="tc-sidebar">
+          <div class="side-card">
+            <p class="side-card-title" id="heroCardTitle"></p>
+            <div class="side-badges" id="heroBadges"></div>
+            <p class="side-note" id="heroCardNote"></p>
+          </div>
+          <nav class="side-nav" id="sideNav" aria-label="Bölümler"></nav>
+          <a class="btn btn-primary side-request" id="sideRequest" href="#documents"></a>
+        </aside>
+        <!-- Dynamic sections injected here -->
+        <div class="tc-content" id="sections"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="footer-brand-row">
+          <img class="footer-logo-img" src="assets/img/datassist-logo-white.png" alt="Datassist" />
+          <span class="brand-accent brand-accent-light" data-i18n="brand.accent"></span>
+        </span>
+        <p id="footerTagline"></p>
+      </div>
+      <nav class="footer-links" id="footerLinks" aria-label="Alt menü"></nav>
+    </div>
+    <div class="container footer-bottom">
+      <p id="footerCopyright"></p>
+    </div>
+  </footer>
+
+  <!-- Request Document Modal -->
+  <div class="modal" id="requestModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-overlay" data-close></div>
+    <div class="modal-box" role="document">
+      <button class="modal-close" data-close aria-label="Kapat">&times;</button>
+      <h3 id="modalTitle"></h3>
+      <p class="modal-doc" id="modalDoc"></p>
+      <form id="requestForm" class="modal-form">
+        <label><span id="lblName"></span><input type="text" name="name" required /></label>
+        <label><span id="lblEmail"></span><input type="email" name="email" required /></label>
+        <label><span id="lblCompany"></span><input type="text" name="company" /></label>
+        <button type="submit" class="btn btn-primary" id="modalSubmit"></button>
+        <p class="modal-success" id="modalSuccess" hidden></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
