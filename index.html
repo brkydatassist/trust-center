@@ -90,10 +90,31 @@
       <form id="requestForm" class="modal-form">
         <label><span id="lblName"></span><input type="text" name="name" required /></label>
         <label><span id="lblEmail"></span><input type="email" name="email" required /></label>
-        <label><span id="lblCompany"></span><input type="text" name="company" /></label>
-        <button type="submit" class="btn btn-primary" id="modalSubmit"></button>
+        <label><span id="lblCompany"></span><input type="text" name="company" required /></label>
+        <label class="modal-consent" id="consentRow" hidden>
+          <input type="checkbox" id="consentCheck" />
+          <span id="consentText"></span>
+        </label>
+        <button type="submit" class="btn btn-primary" id="modalSubmit" disabled></button>
         <p class="modal-success" id="modalSuccess" hidden></p>
       </form>
+    </div>
+  </div>
+
+  <!-- NDA Sözleşme Önizleme Modalı -->
+  <div class="modal" id="agreementModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-overlay" data-close-agreement></div>
+    <div class="modal-box modal-box-lg agreement-box" role="document">
+      <div class="agreement-head">
+        <h3 id="agreementTitle"></h3>
+        <div class="agreement-actions">
+          <a id="agreementDownload" class="doc-btn" href="#" download></a>
+          <button class="modal-close agreement-close" data-close-agreement aria-label="Kapat">&times;</button>
+        </div>
+      </div>
+      <div class="agreement-body">
+        <iframe id="agreementFrame" title="agreement" src="about:blank"></iframe>
+      </div>
     </div>
   </div>
 

@@ -192,7 +192,7 @@ img { max-width: 100%; }
 .posture-icon svg { width: 24px; height: 24px; }
 .posture-head h3 { font-size: 21px; }
 .posture-summary { color: var(--muted); font-size: 15px; margin: 0 0 22px; }
-.posture-list { display: grid; gap: 16px; max-height: 56vh; overflow-y: auto; }
+.posture-list { display: grid; gap: 16px; }
 .posture-item { display: flex; gap: 14px; align-items: flex-start; }
 .posture-check {
   width: 24px; height: 24px; border-radius: 50%; flex-shrink: 0; margin-top: 1px;
@@ -254,7 +254,7 @@ img { max-width: 100%; }
 table.sub-table { width: 100%; border-collapse: collapse; min-width: 560px; }
 .sub-table th {
   text-align: left; font-size: 12.5px; text-transform: uppercase; letter-spacing: .06em;
-  color: var(--muted); padding: 16px 22px; background: var(--surface); border-bottom: 1px solid var(--line);
+  color: var(--navy); font-weight: 700; padding: 16px 22px; background: #e9eef4; border-bottom: 1px solid var(--line);
 }
 .sub-table td { padding: 16px 22px; border-bottom: 1px solid var(--line); font-size: 15px; }
 .sub-table tr:last-child td { border-bottom: none; }
@@ -296,12 +296,12 @@ table.sub-table { width: 100%; border-collapse: collapse; min-width: 560px; }
 .footer-bottom { padding-top: 24px; font-size: 13.5px; color: rgba(255,255,255,.5); }
 
 /* ---------- Modal ---------- */
-.modal { position: fixed; inset: 0; z-index: 100; display: none; }
+.modal { position: fixed; inset: 0; z-index: 100; display: none; overflow-y: auto; }
 .modal.open { display: block; }
-.modal-overlay { position: absolute; inset: 0; background: rgba(10,32,54,.55); backdrop-filter: blur(3px); }
+.modal-overlay { position: fixed; inset: 0; background: rgba(10,32,54,.55); backdrop-filter: blur(3px); }
 .modal-box {
   position: relative; z-index: 2; background: var(--white); max-width: 460px; width: calc(100% - 40px);
-  margin: 8vh auto 0; border-radius: var(--radius); padding: 34px; box-shadow: var(--shadow-lg);
+  margin: 8vh auto; border-radius: var(--radius); padding: 34px; box-shadow: var(--shadow-lg);
   animation: pop .22s ease;
 }
 @keyframes pop { from { transform: translateY(14px); opacity: 0; } to { transform: none; opacity: 1; } }
@@ -316,6 +316,30 @@ table.sub-table { width: 100%; border-collapse: collapse; min-width: 560px; }
 }
 .modal-form input:focus { outline: none; border-color: var(--orange); }
 .modal-success { color: var(--green); font-weight: 600; font-size: 14.5px; text-align: center; }
+
+/* Pasif buton (zorunlu alanlar/onay tamamlanmadan) */
+.btn:disabled, .btn[disabled] { opacity: .45; cursor: not-allowed; transform: none; }
+
+/* NDA onay satırı */
+.modal-form .modal-consent {
+  display: flex; flex-direction: row; align-items: flex-start; gap: 9px;
+  font-size: 14px; font-weight: 500; color: var(--ink); cursor: pointer;
+}
+.modal-consent input[type="checkbox"] { width: 17px; height: 17px; margin-top: 1px; accent-color: var(--orange); flex-shrink: 0; }
+.agreement-link { color: var(--orange-dark); text-decoration: underline; font-weight: 600; cursor: pointer; }
+
+/* NDA sözleşme önizleme modalı */
+.agreement-box { max-width: 720px; display: flex; flex-direction: column; }
+.agreement-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+.agreement-head h3 { font-size: 18px; }
+.agreement-actions { display: flex; align-items: center; gap: 10px; }
+.agreement-close { position: static; }
+.agreement-body { border: 1px solid var(--line); border-radius: var(--radius-sm); overflow: hidden; }
+.agreement-body iframe { width: 100%; height: 60vh; border: 0; display: block; background: var(--surface); }
+
+/* Şerit rozetlerinde sertifika görseli (madde 6 altyapısı) */
+.badge-img { max-height: 34px; width: auto; object-fit: contain; }
+.hero-badge.has-img { padding: 12px 8px; }
 
 /* ---------- Reveal animation ---------- */
 [data-reveal] { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }

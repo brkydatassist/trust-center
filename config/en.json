@@ -12,12 +12,12 @@
         "label": "Documents"
       },
       {
-        "id": "controls",
-        "label": "Security Posture"
-      },
-      {
         "id": "certifications",
         "label": "Certifications"
+      },
+      {
+        "id": "controls",
+        "label": "Security Posture"
       },
       {
         "id": "privacy",
@@ -76,42 +76,50 @@
         {
           "name": "ISO 27001:2022 Certificate",
           "type": "PDF",
-          "access": "public"
+          "access": "public",
+          "url": "assets/docs/iso-27001.pdf"
         },
         {
           "name": "ISO 9001:2015 Certificate",
           "type": "PDF",
-          "access": "public"
+          "access": "public",
+          "url": "assets/docs/iso-9001.pdf"
         },
         {
           "name": "ISO 14001:2015 Certificate",
           "type": "PDF",
-          "access": "public"
+          "access": "public",
+          "url": "assets/docs/iso-14001.pdf"
         },
         {
           "name": "ISAE 3402 Audit Report",
           "type": "PDF",
-          "access": "nda"
+          "access": "nda",
+          "url": "assets/docs/isae-3402.pdf"
         },
         {
           "name": "SOC II Audit Report",
           "type": "PDF",
-          "access": "nda"
+          "access": "nda",
+          "url": "assets/docs/soc-ii.pdf"
         },
         {
           "name": "Information Security Policy",
           "type": "PDF",
-          "access": "request"
+          "access": "request",
+          "url": "assets/docs/information-security-policy.pdf"
         },
         {
           "name": "KVKK Disclosure Notice",
           "type": "PDF",
-          "access": "public"
+          "access": "public",
+          "url": "assets/docs/kvkk-disclosure.pdf"
         },
         {
           "name": "Business Continuity Summary",
           "type": "PDF",
-          "access": "request"
+          "access": "request",
+          "url": "assets/docs/business-continuity.pdf"
         }
       ],
       "labels": {
@@ -119,8 +127,62 @@
         "nda": "NDA Required",
         "request": "On Request",
         "requestBtn": "Request",
-        "downloadBtn": "Download"
+        "downloadBtn": "Download",
+        "consentPrefix": "I accept the ",
+        "consentLink": "Non-Disclosure Agreement",
+        "consentSuffix": ".",
+        "agreementDownload": "Download agreement",
+        "agreementClose": "Close"
+      },
+      "agreement": {
+        "title": "Non-Disclosure Agreement (NDA)",
+        "url": "assets/docs/nda-en.pdf"
       }
+    },
+    {
+      "type": "certifications",
+      "id": "certifications",
+      "eyebrow": "Compliance & Certifications",
+      "title": "Security validated by independent audits",
+      "description": "Our security and quality standards are periodically audited and certified by accredited organizations.",
+      "items": [
+        {
+          "code": "ISO 27001:2022",
+          "name": "Information Security Management System",
+          "description": "International standard ensuring the confidentiality, integrity and availability of information assets.",
+          "status": "Certified"
+        },
+        {
+          "code": "ISO 9001:2015",
+          "name": "Quality Management System",
+          "description": "Management standard based on process quality and continuous improvement.",
+          "status": "Certified"
+        },
+        {
+          "code": "ISO 14001:2015",
+          "name": "Environmental Management System",
+          "description": "Standard covering the systematic management of environmental impact.",
+          "status": "Certified"
+        },
+        {
+          "code": "ISAE 3402",
+          "name": "Service Organization Controls",
+          "description": "Independent assurance report on internal controls at service organizations.",
+          "status": "Audited"
+        },
+        {
+          "code": "SOC II",
+          "name": "Security Audit",
+          "description": "Security audit performed periodically by independent auditors.",
+          "status": "Audited"
+        },
+        {
+          "code": "KVKK & GDPR",
+          "name": "Personal Data Protection Compliance",
+          "description": "Full compliance with legal regulations on the processing of personal data.",
+          "status": "Compliant"
+        }
+      ]
     },
     {
       "type": "controls",
@@ -142,7 +204,7 @@
             },
             {
               "name": "Secure Data Centers",
-              "desc": "Data is hosted in secure data centers across different geographic locations in Türkiye."
+              "desc": "Data is hosted in Tier 4 secure data centers across different geographic locations in Türkiye."
             },
             {
               "name": "Redundant Backup Infrastructure",
@@ -272,51 +334,6 @@
       ]
     },
     {
-      "type": "certifications",
-      "id": "certifications",
-      "eyebrow": "Compliance & Certifications",
-      "title": "Security validated by independent audits",
-      "description": "Our security and quality standards are periodically audited and certified by accredited organizations.",
-      "items": [
-        {
-          "code": "ISO 27001:2022",
-          "name": "Information Security Management System",
-          "description": "International standard ensuring the confidentiality, integrity and availability of information assets.",
-          "status": "Certified"
-        },
-        {
-          "code": "ISO 9001:2015",
-          "name": "Quality Management System",
-          "description": "Management standard based on process quality and continuous improvement.",
-          "status": "Certified"
-        },
-        {
-          "code": "ISO 14001:2015",
-          "name": "Environmental Management System",
-          "description": "Standard covering the systematic management of environmental impact.",
-          "status": "Certified"
-        },
-        {
-          "code": "ISAE 3402",
-          "name": "Service Organization Controls",
-          "description": "Independent assurance report on internal controls at service organizations.",
-          "status": "Audited"
-        },
-        {
-          "code": "SOC II",
-          "name": "Security Audit",
-          "description": "Security audit performed periodically by independent auditors.",
-          "status": "Audited"
-        },
-        {
-          "code": "KVKK & GDPR",
-          "name": "Personal Data Protection Compliance",
-          "description": "Full compliance with legal regulations on the processing of personal data.",
-          "status": "Compliant"
-        }
-      ]
-    },
-    {
       "type": "privacy",
       "id": "privacy",
       "eyebrow": "Data Privacy",
@@ -326,7 +343,7 @@
         {
           "icon": "map-pin",
           "title": "Data Residency",
-          "text": "Your data is hosted on secure servers located in different geographic locations within Türkiye."
+          "text": "Your data is hosted in secure, Tier 4 data centers located in different geographic locations within Türkiye."
         },
         {
           "icon": "file-check",
@@ -387,7 +404,7 @@
       "items": [
         {
           "q": "Where is my data stored?",
-          "a": "Your data is stored on secure servers located in different geographic locations within Türkiye. Redundant backup infrastructure is used for critical data."
+          "a": "Your data is stored in secure, Tier 4 data centers located in different geographic locations within Türkiye. Redundant backup infrastructure is used for critical data."
         },
         {
           "q": "Which certifications do you hold?",
