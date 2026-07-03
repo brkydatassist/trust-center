@@ -104,14 +104,20 @@
         var row = el("div", "doc-row");
         var accessLabel = s.labels[d.access] || d.access;
         var btnLabel = d.access === "public" ? s.labels.downloadBtn : s.labels.requestBtn;
+        var btnHtml = d.access === "public"
+          // Herkese açık: form yok, doğrudan indirme
+          ? '<a class="doc-btn" href="' + esc(d.url || "#") + '" download>' + esc(btnLabel) + "</a>"
+          : '<button class="doc-btn" type="button">' + esc(btnLabel) + "</button>";
         row.innerHTML =
           '<span class="doc-file">' + esc(d.type) + "</span>" +
           '<span class="doc-name">' + esc(d.name) + "</span>" +
           '<span class="doc-access ' + esc(d.access) + '">' + esc(accessLabel) + "</span>" +
-          '<button class="doc-btn">' + esc(btnLabel) + "</button>";
-        row.querySelector(".doc-btn").addEventListener("click", function () {
-          openModal(d.name);
-        });
+          btnHtml;
+        if (d.access !== "public") {
+          row.querySelector(".doc-btn").addEventListener("click", function () {
+            openModal(d, s.agreement);
+          });
+        }
         list.appendChild(row);
       });
       container.appendChild(list);
@@ -234,10 +240,15 @@
     $("#heroCardNote").textContent = comp.note || "";
     var badges = $("#heroBadges");
     badges.innerHTML = "";
+    var shieldSvg = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>';
     (comp.badges || []).forEach(function (b) {
-      badges.appendChild(el("span", "hero-badge",
-        '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
-        "<span>" + esc(b) + "</span>"));
+      // b string olabilir veya { label, img } — img varsa sertifika görseli, yoksa ikon
+      var label = typeof b === "string" ? b : (b.label || "");
+      var img = (b && typeof b === "object") ? b.img : null;
+      var visual = img
+        ? '<img class="badge-img" src="' + esc(img) + '" alt="' + esc(label) + '" />'
+        : shieldSvg;
+      badges.appendChild(el("span", "hero-badge" + (img ? " has-img" : ""), visual + "<span>" + esc(label) + "</span>"));
     });
 
     // Sections
@@ -313,13 +324,39 @@
     postureModal.setAttribute("aria-hidden", "true");
   }
 
-  /* ---------- Modal ---------- */
-  function openModal(docName) {
+  /* ---------- Belge Talep Modalı ---------- */
+  var currentDoc = null;        // o an talep edilen belge
+  var currentAgreement = null;  // NDA sözleşmesi { title, url }
+
+  function docLabels() {
+    var s = (DATA && DATA.sections || []).filter(function (x) { return x.type === "documents"; })[0];
+    return (s && s.labels) || {};
+  }
+
+  function openModal(doc, agreement) {
+    currentDoc = doc;
+    currentAgreement = agreement || null;
     var m = $("#requestModal");
-    $("#modalDoc").textContent = docName;
+    $("#modalDoc").textContent = doc.name || "";
     $("#modalSuccess").hidden = true;
-    $("#requestForm").reset();
-    $("#requestForm").style.display = "";
+    var form = $("#requestForm");
+    form.reset();
+    form.style.display = "";
+
+    // NDA belgesinde onay satırı görünür
+    var isNda = doc.access === "nda";
+    var consentRow = $("#consentRow");
+    consentRow.hidden = !isNda;
+    if (isNda) {
+      var L = docLabels();
+      $("#consentText").innerHTML =
+        esc(L.consentPrefix || "") +
+        '<a href="#" class="agreement-link" id="agreementLink">' + esc(L.consentLink || "") + "</a>" +
+        esc(L.consentSuffix || "");
+      var link = $("#agreementLink");
+      if (link) link.addEventListener("click", function (e) { e.preventDefault(); openAgreement(); });
+    }
+    updateSubmitState();
     m.classList.add("open");
     m.setAttribute("aria-hidden", "false");
   }
@@ -328,22 +365,79 @@
     m.classList.remove("open");
     m.setAttribute("aria-hidden", "true");
   }
+
+  /* Zorunlu alanlar (+ NDA'da onay) tamamlanmadan "Talep Gönder" pasif */
+  function updateSubmitState() {
+    var f = $("#requestForm");
+    var nm = f.querySelector('[name="name"]');
+    var em = f.querySelector('[name="email"]');
+    var co = f.querySelector('[name="company"]');
+    var ok = !!(nm.value.trim() && co.value.trim() && em.value.trim() && em.checkValidity());
+    if (currentDoc && currentDoc.access === "nda") ok = ok && $("#consentCheck").checked;
+    $("#modalSubmit").disabled = !ok;
+  }
+
+  /* ---------- NDA Sözleşme Önizleme ---------- */
+  function openAgreement() {
+    if (!currentAgreement) return;
+    var m = $("#agreementModal");
+    $("#agreementTitle").textContent = currentAgreement.title || "";
+    $("#agreementFrame").src = currentAgreement.url;
+    var dl = $("#agreementDownload");
+    dl.href = currentAgreement.url;
+    dl.textContent = docLabels().agreementDownload || "İndir";
+    m.classList.add("open");
+    m.setAttribute("aria-hidden", "false");
+  }
+  function closeAgreement() {
+    var m = $("#agreementModal");
+    m.classList.remove("open");
+    m.setAttribute("aria-hidden", "true");
+    $("#agreementFrame").src = "about:blank";
+  }
+
   function setupModalStatic() {
     document.querySelectorAll("#requestModal [data-close]").forEach(function (b) {
       b.addEventListener("click", closeModal);
     });
-    document.addEventListener("keydown", function (e) { if (e.key === "Escape") { closeModal(); closePostureModal(); } });
-    $("#requestForm").addEventListener("submit", function (e) {
+    document.querySelectorAll("#agreementModal [data-close-agreement]").forEach(function (b) {
+      b.addEventListener("click", closeAgreement);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") { closeAgreement(); closeModal(); closePostureModal(); }
+    });
+    var form = $("#requestForm");
+    form.addEventListener("input", updateSubmitState);
+    $("#consentCheck").addEventListener("change", updateSubmitState);
+    form.addEventListener("submit", function (e) {
       e.preventDefault();
+      // Canlıda talep belirlenmiş e-posta adresine mailto ile iletilir
+      var to = (SITE.brand && SITE.brand.email) || "";
+      var nm = form.querySelector('[name="name"]').value.trim();
+      var em = form.querySelector('[name="email"]').value.trim();
+      var co = form.querySelector('[name="company"]').value.trim();
+      var subject = (locale === "tr" ? "Belge Talebi: " : "Document Request: ") + (currentDoc ? currentDoc.name : "");
+      var L = locale === "tr"
+        ? { doc: "Belge", name: "Ad Soyad", email: "E-posta", company: "Şirket", nda: "Gizlilik sözleşmesi kabul edildi." }
+        : { doc: "Document", name: "Full Name", email: "Email", company: "Company", nda: "Non-disclosure agreement accepted." };
+      var body = [
+        L.doc + ": " + (currentDoc ? currentDoc.name : ""),
+        L.name + ": " + nm,
+        L.email + ": " + em,
+        L.company + ": " + co
+      ];
+      if (currentDoc && currentDoc.access === "nda") body.push(L.nda);
+      window.location.href = "mailto:" + encodeURIComponent(to) +
+        "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body.join("\n"));
       this.style.display = "none";
-      var ok = $("#modalSuccess");
-      ok.hidden = false;
+      $("#modalSuccess").hidden = false;
     });
   }
+
   function applyModalLabels() {
     var t = locale === "tr"
-      ? { title: "Belge Talebi", name: "Ad Soyad", email: "E-posta", company: "Şirket (opsiyonel)", submit: "Talep Gönder", success: "Talebiniz alındı. En kısa sürede size dönüş yapacağız." }
-      : { title: "Document Request", name: "Full Name", email: "Email", company: "Company (optional)", submit: "Send Request", success: "Your request has been received. We will get back to you shortly." };
+      ? { title: "Belge Talebi", name: "Ad Soyad", email: "E-posta", company: "Şirket", submit: "Talep Gönder", success: "Talebiniz alındı. En kısa sürede size dönüş yapacağız." }
+      : { title: "Document Request", name: "Full Name", email: "Email", company: "Company", submit: "Send Request", success: "Your request has been received. We will get back to you shortly." };
     $("#modalTitle").textContent = t.title;
     $("#lblName").textContent = t.name;
     $("#lblEmail").textContent = t.email;

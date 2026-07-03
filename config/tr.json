@@ -12,12 +12,12 @@
         "label": "Belgeler"
       },
       {
-        "id": "controls",
-        "label": "Güvenlik Duruşu"
-      },
-      {
         "id": "certifications",
         "label": "Sertifikalar"
+      },
+      {
+        "id": "controls",
+        "label": "Güvenlik Duruşu"
       },
       {
         "id": "privacy",
@@ -76,42 +76,50 @@
         {
           "name": "ISO 27001:2022 Sertifikası",
           "type": "PDF",
-          "access": "public"
+          "access": "public",
+          "url": "assets/docs/iso-27001.pdf"
         },
         {
           "name": "ISO 9001:2015 Sertifikası",
           "type": "PDF",
-          "access": "public"
+          "access": "public",
+          "url": "assets/docs/iso-9001.pdf"
         },
         {
           "name": "ISO 14001:2015 Sertifikası",
           "type": "PDF",
-          "access": "public"
+          "access": "public",
+          "url": "assets/docs/iso-14001.pdf"
         },
         {
           "name": "ISAE 3402 Denetim Raporu",
           "type": "PDF",
-          "access": "nda"
+          "access": "nda",
+          "url": "assets/docs/isae-3402.pdf"
         },
         {
           "name": "SOC II Denetim Raporu",
           "type": "PDF",
-          "access": "nda"
+          "access": "nda",
+          "url": "assets/docs/soc-ii.pdf"
         },
         {
           "name": "Bilgi Güvenliği Politikası",
           "type": "PDF",
-          "access": "request"
+          "access": "request",
+          "url": "assets/docs/bilgi-guvenligi-politikasi.pdf"
         },
         {
           "name": "KVKK Aydınlatma Metni",
           "type": "PDF",
-          "access": "public"
+          "access": "public",
+          "url": "assets/docs/kvkk-aydinlatma.pdf"
         },
         {
           "name": "İş Sürekliliği Özeti",
           "type": "PDF",
-          "access": "request"
+          "access": "request",
+          "url": "assets/docs/is-surekliligi.pdf"
         }
       ],
       "labels": {
@@ -119,8 +127,62 @@
         "nda": "NDA Gerekli",
         "request": "Talep Üzerine",
         "requestBtn": "Talep Et",
-        "downloadBtn": "İndir"
+        "downloadBtn": "İndir",
+        "consentPrefix": "",
+        "consentLink": "Gizlilik sözleşmesi",
+        "consentSuffix": "ni okudum ve kabul ediyorum.",
+        "agreementDownload": "Sözleşmeyi indir",
+        "agreementClose": "Kapat"
+      },
+      "agreement": {
+        "title": "Gizlilik Sözleşmesi (NDA)",
+        "url": "assets/docs/nda-tr.pdf"
       }
+    },
+    {
+      "type": "certifications",
+      "id": "certifications",
+      "eyebrow": "Uyumluluk & Sertifikalar",
+      "title": "Bağımsız denetimlerle doğrulanmış güvenlik",
+      "description": "Güvenlik ve kalite standartlarımız, akredite kuruluşlar tarafından periyodik olarak denetlenir ve belgelendirilir.",
+      "items": [
+        {
+          "code": "ISO 27001:2022",
+          "name": "Bilgi Güvenliği Yönetim Sistemi",
+          "description": "Bilgi varlıklarının gizliliği, bütünlüğü ve erişilebilirliğini güvence altına alan uluslararası standart.",
+          "status": "Sertifikalı"
+        },
+        {
+          "code": "ISO 9001:2015",
+          "name": "Kalite Yönetim Sistemi",
+          "description": "Süreç kalitesi ve sürekli iyileştirmeyi temel alan yönetim standardı.",
+          "status": "Sertifikalı"
+        },
+        {
+          "code": "ISO 14001:2015",
+          "name": "Çevre Yönetim Sistemi",
+          "description": "Çevresel etkilerin sistematik yönetimini kapsayan standart.",
+          "status": "Sertifikalı"
+        },
+        {
+          "code": "ISAE 3402",
+          "name": "Hizmet Organizasyonu Kontrolleri",
+          "description": "Hizmet organizasyonlarındaki iç kontrollerin bağımsız denetim raporu.",
+          "status": "Denetimli"
+        },
+        {
+          "code": "SOC II",
+          "name": "Güvenlik Denetimi",
+          "description": "Bağımsız denetçiler tarafından periyodik olarak yürütülen güvenlik denetimi.",
+          "status": "Denetimli"
+        },
+        {
+          "code": "KVKK & GDPR",
+          "name": "Kişisel Veri Koruma Uyumu",
+          "description": "Kişisel verilerin işlenmesinde yasal düzenlemelere tam uyum.",
+          "status": "Uyumlu"
+        }
+      ]
     },
     {
       "type": "controls",
@@ -142,7 +204,7 @@
             },
             {
               "name": "Güvenli Veri Merkezleri",
-              "desc": "Veriler Türkiye'de farklı coğrafi lokasyonlardaki güvenli veri merkezlerinde barındırılır."
+              "desc": "Veriler Türkiye'de farklı coğrafi lokasyonlardaki Tier 4 güvenli veri merkezlerinde barındırılır."
             },
             {
               "name": "Yedekli Yedekleme Altyapısı",
@@ -272,51 +334,6 @@
       ]
     },
     {
-      "type": "certifications",
-      "id": "certifications",
-      "eyebrow": "Uyumluluk & Sertifikalar",
-      "title": "Bağımsız denetimlerle doğrulanmış güvenlik",
-      "description": "Güvenlik ve kalite standartlarımız, akredite kuruluşlar tarafından periyodik olarak denetlenir ve belgelendirilir.",
-      "items": [
-        {
-          "code": "ISO 27001:2022",
-          "name": "Bilgi Güvenliği Yönetim Sistemi",
-          "description": "Bilgi varlıklarının gizliliği, bütünlüğü ve erişilebilirliğini güvence altına alan uluslararası standart.",
-          "status": "Sertifikalı"
-        },
-        {
-          "code": "ISO 9001:2015",
-          "name": "Kalite Yönetim Sistemi",
-          "description": "Süreç kalitesi ve sürekli iyileştirmeyi temel alan yönetim standardı.",
-          "status": "Sertifikalı"
-        },
-        {
-          "code": "ISO 14001:2015",
-          "name": "Çevre Yönetim Sistemi",
-          "description": "Çevresel etkilerin sistematik yönetimini kapsayan standart.",
-          "status": "Sertifikalı"
-        },
-        {
-          "code": "ISAE 3402",
-          "name": "Hizmet Organizasyonu Kontrolleri",
-          "description": "Hizmet organizasyonlarındaki iç kontrollerin bağımsız denetim raporu.",
-          "status": "Denetimli"
-        },
-        {
-          "code": "SOC II",
-          "name": "Güvenlik Denetimi",
-          "description": "Bağımsız denetçiler tarafından periyodik olarak yürütülen güvenlik denetimi.",
-          "status": "Denetimli"
-        },
-        {
-          "code": "KVKK & GDPR",
-          "name": "Kişisel Veri Koruma Uyumu",
-          "description": "Kişisel verilerin işlenmesinde yasal düzenlemelere tam uyum.",
-          "status": "Uyumlu"
-        }
-      ]
-    },
-    {
       "type": "privacy",
       "id": "privacy",
       "eyebrow": "Veri Gizliliği",
@@ -326,7 +343,7 @@
         {
           "icon": "map-pin",
           "title": "Veri Yerleşimi",
-          "text": "Verileriniz Türkiye sınırları içindeki farklı coğrafi lokasyonlarda bulunan güvenli sunucularda barındırılır."
+          "text": "Verileriniz Türkiye sınırları içindeki, Tier 4 seviyesindeki farklı coğrafi lokasyonlarda bulunan güvenli veri merkezlerinde barındırılır."
         },
         {
           "icon": "file-check",
@@ -387,7 +404,7 @@
       "items": [
         {
           "q": "Verilerim nerede saklanıyor?",
-          "a": "Verileriniz Türkiye sınırları içindeki farklı coğrafi lokasyonlarda bulunan güvenli sunucularda saklanır. Kritik veriler için yedekli yedekleme altyapısı kullanılır."
+          "a": "Verileriniz Türkiye sınırları içindeki, Tier 4 seviyesindeki farklı coğrafi lokasyonlarda bulunan güvenli veri merkezlerinde saklanır. Kritik veriler için yedekli yedekleme altyapısı kullanılır."
         },
         {
           "q": "Hangi sertifikalara sahipsiniz?",
