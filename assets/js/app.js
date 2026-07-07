@@ -501,8 +501,18 @@
     });
   }
 
+  /* ---------- Sürüm (deploy kontrolü) ---------- */
+  function markVersion() {
+    var v = (document.querySelector('meta[name="tc-version"]') || {}).content || "?";
+    var b = (document.querySelector('meta[name="tc-build"]') || {}).content || "";
+    document.documentElement.setAttribute("data-version", v);
+    if (b) document.documentElement.setAttribute("data-build", b);
+    try { console.info("Datassist Trust Center — v" + v + (b ? " (" + b + ")" : "")); } catch (e) {}
+  }
+
   /* ---------- Başlat ---------- */
   function init() {
+    markVersion();
     setupHeader();
     setupModalStatic();
     fetch("config/site.json")
