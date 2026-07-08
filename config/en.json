@@ -57,10 +57,9 @@
         "ISO 27001:2022",
         "ISO 9001:2015",
         "ISO 14001:2015",
-        "ISAE 3402",
-        "SOC II",
-        "KVKK",
-        "GDPR"
+        "ISAE 3402 SOC",
+        "KVKK/GDPR",
+        "PEN TEST"
       ]
     }
   },
@@ -77,49 +76,61 @@
           "name": "ISO 27001:2022 Certificate",
           "type": "PDF",
           "access": "public",
-          "url": "assets/docs/iso-27001.pdf"
+          "url": "assets/docs/iso-27001-en.pdf"
         },
         {
           "name": "ISO 9001:2015 Certificate",
           "type": "PDF",
           "access": "public",
-          "url": "assets/docs/iso-9001.pdf"
+          "url": "assets/docs/iso-9001-en.pdf"
         },
         {
           "name": "ISO 14001:2015 Certificate",
           "type": "PDF",
           "access": "public",
-          "url": "assets/docs/iso-14001.pdf"
+          "url": "assets/docs/iso-14001-en.pdf"
         },
         {
           "name": "ISAE 3402 Audit Report",
           "type": "PDF",
-          "access": "nda",
-          "url": "assets/docs/isae-3402.pdf"
+          "access": "request",
+          "url": "assets/docs/isae-3402-en.pdf"
         },
         {
           "name": "SOC II Audit Report",
           "type": "PDF",
-          "access": "nda",
-          "url": "assets/docs/soc-ii.pdf"
+          "access": "request",
+          "url": "assets/docs/soc-ii-en.pdf"
         },
         {
           "name": "Information Security Policy",
           "type": "PDF",
           "access": "request",
-          "url": "assets/docs/information-security-policy.pdf"
+          "url": "assets/docs/information-security-policy-en.pdf"
         },
         {
-          "name": "KVKK Disclosure Notice",
-          "type": "PDF",
-          "access": "public",
-          "url": "assets/docs/kvkk-disclosure.pdf"
-        },
-        {
-          "name": "Business Continuity Summary",
+          "name": "KVKK Data Retention & Disposal Policy",
           "type": "PDF",
           "access": "request",
-          "url": "assets/docs/business-continuity.pdf"
+          "url": "assets/docs/kvkk-retention-en.pdf"
+        },
+        {
+          "name": "KVKK Data Processing & Protection Policy",
+          "type": "PDF",
+          "access": "request",
+          "url": "assets/docs/kvkk-processing-en.pdf"
+        },
+        {
+          "name": "Business Continuity Plan",
+          "type": "PDF",
+          "access": "request",
+          "url": "assets/docs/business-continuity-en.pdf"
+        },
+        {
+          "name": "Disaster Recovery Plan",
+          "type": "PDF",
+          "access": "request",
+          "url": "assets/docs/disaster-recovery-en.pdf"
         }
       ],
       "labels": {
@@ -165,19 +176,13 @@
           "status": "Certified"
         },
         {
-          "code": "ISAE 3402",
+          "code": "ISAE 3402 SOC",
           "name": "Service Organization Controls",
-          "description": "Independent assurance report on internal controls at service organizations.",
+          "description": "Independent assurance report on internal controls at service organizations (ISAE 3402 / SOC).",
           "status": "Audited"
         },
         {
-          "code": "SOC II",
-          "name": "Security Audit",
-          "description": "Security audit performed periodically by independent auditors.",
-          "status": "Audited"
-        },
-        {
-          "code": "KVKK & GDPR",
+          "code": "KVKK/GDPR",
           "name": "Personal Data Protection Compliance",
           "description": "Full compliance with legal regulations on the processing of personal data.",
           "status": "Compliant"
@@ -291,8 +296,8 @@
           "summary": "People, process and audit-focused security management.",
           "controls": [
             {
-              "name": "SOC II Audits",
-              "desc": "Independent SOC II security audits are performed periodically."
+              "name": "ISAE 3402 SOC Audits",
+              "desc": "Independent ISAE 3402 SOC security audits are performed periodically."
             },
             {
               "name": "Awareness Training",
@@ -404,11 +409,11 @@
       "items": [
         {
           "q": "Where is my data stored?",
-          "a": "Your data is stored in secure, Tier 4 data centers located in different geographic locations within Türkiye. Redundant backup infrastructure is used for critical data."
+          "a": "Datassist's own servers are hosted in the KKB Anadolu Data Center in Ankara, while disaster recovery is provided from the Doruknet facility in İstanbul. The server infrastructure is wholly owned by Datassist, and our suppliers have no access to customer data."
         },
         {
           "q": "Which certifications do you hold?",
-          "a": "We hold ISO 27001:2022, ISO 9001:2015 and ISO 14001:2015 certifications. We are also independently audited under ISAE 3402 and SOC II."
+          "a": "We hold ISO 27001:2022, ISO 9001:2015 and ISO 14001:2015 certifications. We are also independently audited under ISAE 3402 SOC."
         },
         {
           "q": "How do you ensure KVKK and GDPR compliance?",

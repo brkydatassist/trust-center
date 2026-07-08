@@ -57,10 +57,9 @@
         "ISO 27001:2022",
         "ISO 9001:2015",
         "ISO 14001:2015",
-        "ISAE 3402",
-        "SOC II",
-        "KVKK",
-        "GDPR"
+        "ISAE 3402 SOC",
+        "KVKK/GDPR",
+        "PEN TEST"
       ]
     }
   },
@@ -77,49 +76,61 @@
           "name": "ISO 27001:2022 Sertifikası",
           "type": "PDF",
           "access": "public",
-          "url": "assets/docs/iso-27001.pdf"
+          "url": "assets/docs/iso-27001-tr.pdf"
         },
         {
           "name": "ISO 9001:2015 Sertifikası",
           "type": "PDF",
           "access": "public",
-          "url": "assets/docs/iso-9001.pdf"
+          "url": "assets/docs/iso-9001-tr.pdf"
         },
         {
           "name": "ISO 14001:2015 Sertifikası",
           "type": "PDF",
           "access": "public",
-          "url": "assets/docs/iso-14001.pdf"
+          "url": "assets/docs/iso-14001-tr.pdf"
         },
         {
           "name": "ISAE 3402 Denetim Raporu",
           "type": "PDF",
-          "access": "nda",
-          "url": "assets/docs/isae-3402.pdf"
+          "access": "request",
+          "url": "assets/docs/isae-3402-tr.pdf"
         },
         {
           "name": "SOC II Denetim Raporu",
           "type": "PDF",
-          "access": "nda",
-          "url": "assets/docs/soc-ii.pdf"
+          "access": "request",
+          "url": "assets/docs/soc-ii-tr.pdf"
         },
         {
           "name": "Bilgi Güvenliği Politikası",
           "type": "PDF",
           "access": "request",
-          "url": "assets/docs/bilgi-guvenligi-politikasi.pdf"
+          "url": "assets/docs/bilgi-guvenligi-politikasi-tr.pdf"
         },
         {
-          "name": "KVKK Aydınlatma Metni",
-          "type": "PDF",
-          "access": "public",
-          "url": "assets/docs/kvkk-aydinlatma.pdf"
-        },
-        {
-          "name": "İş Sürekliliği Özeti",
+          "name": "KVKK Saklama ve İmha Politikası",
           "type": "PDF",
           "access": "request",
-          "url": "assets/docs/is-surekliligi.pdf"
+          "url": "assets/docs/kvkk-saklama-imha-tr.pdf"
+        },
+        {
+          "name": "KVKK İşleme ve Koruma Politikası",
+          "type": "PDF",
+          "access": "request",
+          "url": "assets/docs/kvkk-isleme-koruma-tr.pdf"
+        },
+        {
+          "name": "İş Planı",
+          "type": "PDF",
+          "access": "request",
+          "url": "assets/docs/is-plani-tr.pdf"
+        },
+        {
+          "name": "Felaket Kurtarma Planı",
+          "type": "PDF",
+          "access": "request",
+          "url": "assets/docs/felaket-kurtarma-tr.pdf"
         }
       ],
       "labels": {
@@ -165,19 +176,13 @@
           "status": "Sertifikalı"
         },
         {
-          "code": "ISAE 3402",
+          "code": "ISAE 3402 SOC",
           "name": "Hizmet Organizasyonu Kontrolleri",
-          "description": "Hizmet organizasyonlarındaki iç kontrollerin bağımsız denetim raporu.",
+          "description": "Hizmet organizasyonlarındaki iç kontrollerin bağımsız denetim raporu (ISAE 3402 / SOC).",
           "status": "Denetimli"
         },
         {
-          "code": "SOC II",
-          "name": "Güvenlik Denetimi",
-          "description": "Bağımsız denetçiler tarafından periyodik olarak yürütülen güvenlik denetimi.",
-          "status": "Denetimli"
-        },
-        {
-          "code": "KVKK & GDPR",
+          "code": "KVKK/GDPR",
           "name": "Kişisel Veri Koruma Uyumu",
           "description": "Kişisel verilerin işlenmesinde yasal düzenlemelere tam uyum.",
           "status": "Uyumlu"
@@ -291,8 +296,8 @@
           "summary": "İnsan, süreç ve denetim odaklı güvenlik yönetimi.",
           "controls": [
             {
-              "name": "SOC II Denetimleri",
-              "desc": "Periyodik olarak bağımsız SOC II güvenlik denetimleri yürütülür."
+              "name": "ISAE 3402 SOC Denetimleri",
+              "desc": "Periyodik olarak bağımsız ISAE 3402 SOC güvenlik denetimleri yürütülür."
             },
             {
               "name": "Farkındalık Eğitimleri",
@@ -404,11 +409,11 @@
       "items": [
         {
           "q": "Verilerim nerede saklanıyor?",
-          "a": "Verileriniz Türkiye sınırları içindeki, Tier 4 seviyesindeki farklı coğrafi lokasyonlarda bulunan güvenli veri merkezlerinde saklanır. Kritik veriler için yedekli yedekleme altyapısı kullanılır."
+          "a": "Datassist'e ait sunucular, Ankara'da yer alan KKB Anadolu Veri Merkezi'nde barındırılmakta, felaket kurtarma hizmeti ise İstanbul'daki Doruknet tesisinden sağlanmaktadır. Sunucu altyapısının mülkiyeti tamamen Datassist'e ait olup, tedarikçilerimizin müşteri verilerine erişimi bulunmamaktadır."
         },
         {
           "q": "Hangi sertifikalara sahipsiniz?",
-          "a": "ISO 27001:2022, ISO 9001:2015 ve ISO 14001:2015 sertifikalarına sahibiz. Ayrıca ISAE 3402 ve SOC II kapsamında bağımsız denetimlerden geçiyoruz."
+          "a": "ISO 27001:2022, ISO 9001:2015 ve ISO 14001:2015 sertifikalarına sahibiz. Ayrıca ISAE 3402 SOC kapsamında bağımsız denetimlerden geçiyoruz."
         },
         {
           "q": "KVKK ve GDPR uyumluluğunuz nasıl sağlanıyor?",
