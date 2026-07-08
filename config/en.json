@@ -58,8 +58,7 @@
         "ISO 9001:2015",
         "ISO 14001:2015",
         "ISAE 3402 SOC",
-        "KVKK/GDPR",
-        "PEN TEST"
+        "KVKK/GDPR"
       ]
     }
   },
@@ -101,6 +100,12 @@
           "type": "PDF",
           "access": "request",
           "url": "assets/docs/soc-ii-en.pdf"
+        },
+        {
+          "name": "Penetration Test Report",
+          "type": "PDF",
+          "access": "request",
+          "url": "assets/docs/pentest-en.pdf"
         },
         {
           "name": "Information Security Policy",
