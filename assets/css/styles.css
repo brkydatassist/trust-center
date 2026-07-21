@@ -307,7 +307,12 @@ table.sub-table { width: 100%; border-collapse: collapse; min-width: 560px; }
 @keyframes pop { from { transform: translateY(14px); opacity: 0; } to { transform: none; opacity: 1; } }
 .modal-close { position: absolute; top: 16px; right: 18px; background: none; border: none; font-size: 28px; line-height: 1; color: var(--muted); cursor: pointer; }
 .modal-box h3 { font-size: 21px; margin-bottom: 6px; }
-.modal-doc { color: var(--orange-dark); font-weight: 600; font-size: 14.5px; margin-bottom: 22px; }
+.modal-doc { color: var(--orange-dark); font-weight: 600; font-size: 14.5px; margin-bottom: 18px; }
+.modal-info {
+  background: rgba(30,115,190,.07); border: 1px solid rgba(30,115,190,.22); border-left: 3px solid var(--blue);
+  border-radius: var(--radius-sm); padding: 12px 14px; font-size: 13.5px; color: var(--navy);
+  line-height: 1.5; margin-bottom: 20px;
+}
 .modal-form { display: grid; gap: 16px; }
 .modal-form label { display: grid; gap: 6px; font-size: 14px; font-weight: 600; color: var(--navy); }
 .modal-form input {
