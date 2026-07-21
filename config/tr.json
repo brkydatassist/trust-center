@@ -33,7 +33,7 @@
       }
     ],
     "cta": {
-      "label": "Belge Talep Et",
+      "label": "Belgeler",
       "target": "documents"
     }
   },
@@ -42,7 +42,7 @@
     "title": "Datassist Güven Merkezi",
     "subtitle": "En hassas ve kritik verilerinizi her seviyede gizli ve özel olarak koruyoruz. Bilgi güvenliği sertifikalarımıza, güvenlik kontrollerimize ve uyumluluk belgelerimize buradan ulaşabilirsiniz.",
     "primaryCta": {
-      "label": "Belge Talep Et",
+      "label": "Belgeler",
       "target": "documents"
     },
     "secondaryCta": {
@@ -68,8 +68,8 @@
       "id": "documents",
       "eyebrow": "Belgeler & Kaynaklar",
       "title": "Uyumluluk belgelerimize erişin",
-      "description": "Aşağıdaki belgeler talep üzerine paylaşılır. Erişim için ilgili belgeyi seçerek talep oluşturabilirsiniz.",
-      "requestNote": "Bazı belgeler gizlilik sözleşmesi (NDA) gerektirebilir.",
+      "description": "Aşağıdaki belgeler içerisinde erişime açık olanları indirebilirsiniz.",
+      "requestNote": "",
       "items": [
         {
           "name": "ISO 27001:2022 Sertifikası",
@@ -90,52 +90,46 @@
           "url": "assets/docs/iso-14001-tr.pdf"
         },
         {
-          "name": "ISAE 3402 Denetim Raporu",
+          "name": "Bilgi Güvenliği Politikası",
           "type": "PDF",
-          "access": "request",
-          "url": "assets/docs/isae-3402-tr.pdf"
+          "access": "public",
+          "url": "assets/docs/bilgi-guvenligi-politikasi-tr.pdf"
         },
         {
-          "name": "SOC II Denetim Raporu",
+          "name": "KVKK Saklama ve İmha Politikası",
+          "type": "PDF",
+          "access": "public",
+          "url": "assets/docs/kvkk-saklama-imha-tr.pdf"
+        },
+        {
+          "name": "KVKK İşleme ve Koruma Politikası",
+          "type": "PDF",
+          "access": "public",
+          "url": "assets/docs/kvkk-isleme-koruma-tr.pdf"
+        },
+        {
+          "name": "İş Planı",
+          "type": "PDF",
+          "access": "public",
+          "url": "assets/docs/is-plani-tr.pdf"
+        },
+        {
+          "name": "Felaket Kurtarma Planı",
+          "type": "PDF",
+          "access": "public",
+          "url": "assets/docs/felaket-kurtarma-tr.pdf"
+        },
+        {
+          "name": "ISAE 3402 SOC Denetim Raporu",
           "type": "PDF",
           "access": "request",
-          "url": "assets/docs/soc-ii-tr.pdf"
+          "url": "assets/docs/isae-3402-soc-tr.pdf"
         },
         {
           "name": "Penetrasyon Testi Raporu",
           "type": "PDF",
           "access": "request",
           "url": "assets/docs/pentest-tr.pdf"
-        },
-        {
-          "name": "Bilgi Güvenliği Politikası",
-          "type": "PDF",
-          "access": "request",
-          "url": "assets/docs/bilgi-guvenligi-politikasi-tr.pdf"
-        },
-        {
-          "name": "KVKK Saklama ve İmha Politikası",
-          "type": "PDF",
-          "access": "request",
-          "url": "assets/docs/kvkk-saklama-imha-tr.pdf"
-        },
-        {
-          "name": "KVKK İşleme ve Koruma Politikası",
-          "type": "PDF",
-          "access": "request",
-          "url": "assets/docs/kvkk-isleme-koruma-tr.pdf"
-        },
-        {
-          "name": "İş Planı",
-          "type": "PDF",
-          "access": "request",
-          "url": "assets/docs/is-plani-tr.pdf"
-        },
-        {
-          "name": "Felaket Kurtarma Planı",
-          "type": "PDF",
-          "access": "request",
-          "url": "assets/docs/felaket-kurtarma-tr.pdf"
         }
       ],
       "labels": {
@@ -153,7 +147,8 @@
       "agreement": {
         "title": "Gizlilik Sözleşmesi (NDA)",
         "url": "assets/docs/nda-tr.pdf"
-      }
+      },
+      "requestInfo": "Bu rapor yalnızca talep üzerine paylaşılır. Bilgilerinizi ilettiğinizde talebiniz değerlendirilerek belge sizinle paylaşılacaktır."
     },
     {
       "type": "certifications",

@@ -328,10 +328,10 @@
   var currentDoc = null;        // o an talep edilen belge
   var currentAgreement = null;  // NDA sözleşmesi { title, url }
 
-  function docLabels() {
-    var s = (DATA && DATA.sections || []).filter(function (x) { return x.type === "documents"; })[0];
-    return (s && s.labels) || {};
+  function docSection() {
+    return (DATA && DATA.sections || []).filter(function (x) { return x.type === "documents"; })[0] || {};
   }
+  function docLabels() { return docSection().labels || {}; }
 
   function openModal(doc, agreement) {
     currentDoc = doc;
@@ -342,6 +342,15 @@
     var form = $("#requestForm");
     form.reset();
     form.style.display = "";
+
+    // Talep belgelerinde bilgilendirme metni göster
+    var info = $("#modalInfo");
+    var infoText = docSection().requestInfo || "";
+    if (doc.access === "request" && infoText) {
+      info.textContent = infoText; info.hidden = false;
+    } else {
+      info.textContent = ""; info.hidden = true;
+    }
 
     // NDA belgesinde onay satırı görünür
     var isNda = doc.access === "nda";

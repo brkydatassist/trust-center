@@ -33,7 +33,7 @@
       }
     ],
     "cta": {
-      "label": "Request Documents",
+      "label": "Documents",
       "target": "documents"
     }
   },
@@ -42,7 +42,7 @@
     "title": "Datassist Trust Center",
     "subtitle": "We protect your most sensitive and critical data as confidential and privileged at every level. Access our information security certifications, security controls and compliance documents here.",
     "primaryCta": {
-      "label": "Request Documents",
+      "label": "Documents",
       "target": "documents"
     },
     "secondaryCta": {
@@ -68,8 +68,8 @@
       "id": "documents",
       "eyebrow": "Documents & Resources",
       "title": "Access our compliance documents",
-      "description": "The documents below are shared upon request. Select the relevant document to create an access request.",
-      "requestNote": "Some documents may require a non-disclosure agreement (NDA).",
+      "description": "You can download the accessible ones among the documents below.",
+      "requestNote": "",
       "items": [
         {
           "name": "ISO 27001:2022 Certificate",
@@ -90,52 +90,46 @@
           "url": "assets/docs/iso-14001-en.pdf"
         },
         {
-          "name": "ISAE 3402 Audit Report",
+          "name": "Information Security Policy",
           "type": "PDF",
-          "access": "request",
-          "url": "assets/docs/isae-3402-en.pdf"
+          "access": "public",
+          "url": "assets/docs/information-security-policy-en.pdf"
         },
         {
-          "name": "SOC II Audit Report",
+          "name": "KVKK Data Retention & Disposal Policy",
+          "type": "PDF",
+          "access": "public",
+          "url": "assets/docs/kvkk-retention-en.pdf"
+        },
+        {
+          "name": "KVKK Data Processing & Protection Policy",
+          "type": "PDF",
+          "access": "public",
+          "url": "assets/docs/kvkk-processing-en.pdf"
+        },
+        {
+          "name": "Business Continuity Plan",
+          "type": "PDF",
+          "access": "public",
+          "url": "assets/docs/business-continuity-en.pdf"
+        },
+        {
+          "name": "Disaster Recovery Plan",
+          "type": "PDF",
+          "access": "public",
+          "url": "assets/docs/disaster-recovery-en.pdf"
+        },
+        {
+          "name": "ISAE 3402 SOC Audit Report",
           "type": "PDF",
           "access": "request",
-          "url": "assets/docs/soc-ii-en.pdf"
+          "url": "assets/docs/isae-3402-soc-en.pdf"
         },
         {
           "name": "Penetration Test Report",
           "type": "PDF",
           "access": "request",
           "url": "assets/docs/pentest-en.pdf"
-        },
-        {
-          "name": "Information Security Policy",
-          "type": "PDF",
-          "access": "request",
-          "url": "assets/docs/information-security-policy-en.pdf"
-        },
-        {
-          "name": "KVKK Data Retention & Disposal Policy",
-          "type": "PDF",
-          "access": "request",
-          "url": "assets/docs/kvkk-retention-en.pdf"
-        },
-        {
-          "name": "KVKK Data Processing & Protection Policy",
-          "type": "PDF",
-          "access": "request",
-          "url": "assets/docs/kvkk-processing-en.pdf"
-        },
-        {
-          "name": "Business Continuity Plan",
-          "type": "PDF",
-          "access": "request",
-          "url": "assets/docs/business-continuity-en.pdf"
-        },
-        {
-          "name": "Disaster Recovery Plan",
-          "type": "PDF",
-          "access": "request",
-          "url": "assets/docs/disaster-recovery-en.pdf"
         }
       ],
       "labels": {
@@ -153,7 +147,8 @@
       "agreement": {
         "title": "Non-Disclosure Agreement (NDA)",
         "url": "assets/docs/nda-en.pdf"
-      }
+      },
+      "requestInfo": "This report is shared only upon request. Once you submit your details, your request will be reviewed and the document will be shared with you."
     },
     {
       "type": "certifications",
