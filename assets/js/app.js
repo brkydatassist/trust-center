@@ -341,16 +341,15 @@
     $("#modalSuccess").hidden = true;
     var form = $("#requestForm");
     form.reset();
-    form.style.display = "";
 
-    // Talep belgelerinde bilgilendirme metni göster
+    // Talep belgeleri: form yerine yalnızca bilgilendirme + "Anladım" butonu
+    var isRequest = doc.access === "request";
     var info = $("#modalInfo");
-    var infoText = docSection().requestInfo || "";
-    if (doc.access === "request" && infoText) {
-      info.textContent = infoText; info.hidden = false;
-    } else {
-      info.textContent = ""; info.hidden = true;
-    }
+    info.textContent = isRequest ? (docSection().requestInfo || "") : "";
+    info.hidden = !isRequest || !info.textContent;
+    form.style.display = isRequest ? "none" : "";
+    var ack = $("#modalAck");
+    ack.hidden = !isRequest;
 
     // NDA belgesinde onay satırı görünür
     var isNda = doc.access === "nda";
@@ -409,6 +408,7 @@
     document.querySelectorAll("#requestModal [data-close]").forEach(function (b) {
       b.addEventListener("click", closeModal);
     });
+    $("#modalAck").addEventListener("click", closeModal);
     document.querySelectorAll("#agreementModal [data-close-agreement]").forEach(function (b) {
       b.addEventListener("click", closeAgreement);
     });
@@ -445,14 +445,15 @@
 
   function applyModalLabels() {
     var t = locale === "tr"
-      ? { title: "Belge Talebi", name: "Ad Soyad", email: "E-posta", company: "Şirket", submit: "Talep Gönder", success: "Talebiniz alındı. En kısa sürede size dönüş yapacağız." }
-      : { title: "Document Request", name: "Full Name", email: "Email", company: "Company", submit: "Send Request", success: "Your request has been received. We will get back to you shortly." };
+      ? { title: "Belge Talebi", name: "Ad Soyad", email: "E-posta", company: "Şirket", submit: "Talep Gönder", success: "Talebiniz alındı. En kısa sürede size dönüş yapacağız.", ack: "Anladım" }
+      : { title: "Document Request", name: "Full Name", email: "Email", company: "Company", submit: "Send Request", success: "Your request has been received. We will get back to you shortly.", ack: "Understood" };
     $("#modalTitle").textContent = t.title;
     $("#lblName").textContent = t.name;
     $("#lblEmail").textContent = t.email;
     $("#lblCompany").textContent = t.company;
     $("#modalSubmit").textContent = t.submit;
     $("#modalSuccess").textContent = t.success;
+    $("#modalAck").textContent = t.ack;
   }
 
   /* ---------- Reveal on scroll ---------- */

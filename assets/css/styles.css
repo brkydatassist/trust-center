@@ -321,6 +321,7 @@ table.sub-table { width: 100%; border-collapse: collapse; min-width: 560px; }
 }
 .modal-form input:focus { outline: none; border-color: var(--orange); }
 .modal-success { color: var(--green); font-weight: 600; font-size: 14.5px; text-align: center; }
+.modal-ack { width: 100%; }
 
 /* Pasif buton (zorunlu alanlar/onay tamamlanmadan) */
 .btn:disabled, .btn[disabled] { opacity: .45; cursor: not-allowed; transform: none; }
