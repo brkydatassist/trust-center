@@ -108,7 +108,7 @@
           "url": "assets/docs/kvkk-isleme-koruma-tr.pdf"
         },
         {
-          "name": "İş Planı",
+          "name": "İş Sürekliliği Planı",
           "type": "PDF",
           "access": "public",
           "url": "assets/docs/is-plani-tr.pdf"
@@ -412,8 +412,8 @@
           "a": "Datassist'e ait sunucular, Ankara'da yer alan KKB Anadolu Veri Merkezi'nde barındırılmakta, felaket kurtarma hizmeti ise İstanbul'daki Doruknet tesisinden sağlanmaktadır. Sunucu altyapısının mülkiyeti tamamen Datassist'e ait olup, tedarikçilerimizin müşteri verilerine erişimi bulunmamaktadır."
         },
         {
-          "q": "Hangi sertifikalara sahipsiniz?",
-          "a": "ISO 27001:2022, ISO 9001:2015 ve ISO 14001:2015 sertifikalarına sahibiz. Ayrıca ISAE 3402 SOC kapsamında bağımsız denetimlerden geçiyoruz."
+          "q": "Hangi sertifika ve raporlara sahipsiniz?",
+          "a": "ISO 27001:2022, ISO 9001:2015 ve ISO 14001:2015 sertifikalarına sahibiz. Ayrıca ISAE 3402 SOC kapsamında bağımsız denetimlerden geçiyor ve düzenli olarak penetrasyon (sızma) testleri yaptırıyoruz."
         },
         {
           "q": "KVKK ve GDPR uyumluluğunuz nasıl sağlanıyor?",
