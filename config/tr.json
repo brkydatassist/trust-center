@@ -75,49 +75,57 @@
           "name": "ISO 27001:2022 Sertifikası",
           "type": "PDF",
           "access": "public",
-          "url": "assets/docs/iso-27001-tr.pdf"
+          "url": "assets/docs/iso-27001-tr.pdf",
+          "downloadName": "Datassist-ISO27001 Sertifikası"
         },
         {
           "name": "ISO 9001:2015 Sertifikası",
           "type": "PDF",
           "access": "public",
-          "url": "assets/docs/iso-9001-tr.pdf"
+          "url": "assets/docs/iso-9001-tr.pdf",
+          "downloadName": "Datassist-ISO9001 Sertifikası"
         },
         {
           "name": "ISO 14001:2015 Sertifikası",
           "type": "PDF",
           "access": "public",
-          "url": "assets/docs/iso-14001-tr.pdf"
+          "url": "assets/docs/iso-14001-tr.pdf",
+          "downloadName": "Datassist-ISO14001 Sertifikası"
         },
         {
           "name": "Bilgi Güvenliği Politikası",
           "type": "PDF",
           "access": "public",
-          "url": "assets/docs/bilgi-guvenligi-politikasi-tr.pdf"
+          "url": "assets/docs/bilgi-guvenligi-politikasi-tr.pdf",
+          "downloadName": "Datassist-Bilgi Güvenliği Politikası"
         },
         {
           "name": "KVKK Saklama ve İmha Politikası",
           "type": "PDF",
           "access": "public",
-          "url": "assets/docs/kvkk-saklama-imha-tr.pdf"
+          "url": "assets/docs/kvkk-saklama-imha-tr.pdf",
+          "downloadName": "Datassist-KVKK Saklama ve İmha Politikası"
         },
         {
           "name": "KVKK İşleme ve Koruma Politikası",
           "type": "PDF",
           "access": "public",
-          "url": "assets/docs/kvkk-isleme-koruma-tr.pdf"
+          "url": "assets/docs/kvkk-isleme-koruma-tr.pdf",
+          "downloadName": "Datassist-KVKK İşleme ve Koruma Politikası"
         },
         {
           "name": "İş Sürekliliği Planı",
           "type": "PDF",
           "access": "public",
-          "url": "assets/docs/is-plani-tr.pdf"
+          "url": "assets/docs/is-plani-tr.pdf",
+          "downloadName": "Datassist-İş Sürekliliği Planı"
         },
         {
           "name": "Felaket Kurtarma Planı",
           "type": "PDF",
           "access": "public",
-          "url": "assets/docs/felaket-kurtarma-tr.pdf"
+          "url": "assets/docs/felaket-kurtarma-tr.pdf",
+          "downloadName": "Datassist-Felaket Kurtarma Planı"
         },
         {
           "name": "ISAE 3402 SOC Denetim Raporu",
