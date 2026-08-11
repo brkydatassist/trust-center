@@ -104,9 +104,11 @@
         var row = el("div", "doc-row");
         var accessLabel = s.labels[d.access] || d.access;
         var btnLabel = d.access === "public" ? s.labels.downloadBtn : s.labels.requestBtn;
+        // İnen dosya adını kurumsal isme sabitle (download="Datassist-...")
+        var dlAttr = d.downloadName ? ' download="' + esc(d.downloadName) + '.pdf"' : " download";
         var btnHtml = d.access === "public"
           // Herkese açık: form yok, doğrudan indirme
-          ? '<a class="doc-btn" href="' + esc(d.url || "#") + '" download>' + esc(btnLabel) + "</a>"
+          ? '<a class="doc-btn" href="' + esc(d.url || "#") + '"' + dlAttr + ">" + esc(btnLabel) + "</a>"
           : '<button class="doc-btn" type="button">' + esc(btnLabel) + "</button>";
         row.innerHTML =
           '<span class="doc-file">' + esc(d.type) + "</span>" +
