@@ -186,7 +186,7 @@
         {
           "code": "ISAE 3402 SOC",
           "name": "Hizmet Organizasyonu Kontrolleri",
-          "description": "Hizmet organizasyonlarındaki iç kontrollerin bağımsız denetim raporu (ISAE 3402 / SOC).",
+          "description": "Hizmet organizasyonlarındaki iç kontrollerin bağımsız denetim raporu.",
           "status": "Denetimli"
         },
         {
@@ -217,7 +217,7 @@
             },
             {
               "name": "Güvenli Veri Merkezleri",
-              "desc": "Veriler Türkiye'de farklı coğrafi lokasyonlardaki Tier 4 güvenli veri merkezlerinde barındırılır."
+              "desc": "Veriler Türkiye'de, İstanbul ve Ankara'daki Tier 4 standartlarındaki güvenli veri merkezlerinde barındırılır."
             },
             {
               "name": "Yedekli Yedekleme Altyapısı",
@@ -356,7 +356,7 @@
         {
           "icon": "map-pin",
           "title": "Veri Yerleşimi",
-          "text": "Verileriniz Türkiye sınırları içindeki, Tier 4 seviyesindeki farklı coğrafi lokasyonlarda bulunan güvenli veri merkezlerinde barındırılır."
+          "text": "Verileriniz Türkiye sınırları içinde, İstanbul ve Ankara'daki Tier 4 standartlarındaki güvenli veri merkezlerinde barındırılır."
         },
         {
           "icon": "file-check",
