@@ -186,7 +186,7 @@
         {
           "code": "ISAE 3402 SOC",
           "name": "Service Organization Controls",
-          "description": "Independent assurance report on internal controls at service organizations (ISAE 3402 / SOC).",
+          "description": "Independent assurance report on internal controls at service organizations.",
           "status": "Audited"
         },
         {
@@ -217,7 +217,7 @@
             },
             {
               "name": "Secure Data Centers",
-              "desc": "Data is hosted in Tier 4 secure data centers across different geographic locations in Türkiye."
+              "desc": "Data is hosted in İstanbul and Ankara, Türkiye, in secure data centers built to Tier 4 standards."
             },
             {
               "name": "Redundant Backup Infrastructure",
@@ -356,7 +356,7 @@
         {
           "icon": "map-pin",
           "title": "Data Residency",
-          "text": "Your data is hosted in secure, Tier 4 data centers located in different geographic locations within Türkiye."
+          "text": "Your data is hosted in İstanbul and Ankara, within Türkiye, in secure data centers built to Tier 4 standards."
         },
         {
           "icon": "file-check",
