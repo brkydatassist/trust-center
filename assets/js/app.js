@@ -201,6 +201,14 @@
     var descMeta = document.querySelector('meta[name="description"]');
     if (descMeta) descMeta.setAttribute("content", DATA.meta.description);
 
+    // SEO/paylaşım meta'larını dile göre senkron tut
+    function setMeta(sel, val) { var m = document.querySelector(sel); if (m) m.setAttribute("content", val); }
+    setMeta('meta[property="og:title"]', DATA.meta.title);
+    setMeta('meta[property="og:description"]', DATA.meta.description);
+    setMeta('meta[name="twitter:title"]', DATA.meta.title);
+    setMeta('meta[name="twitter:description"]', DATA.meta.description);
+    setMeta('meta[property="og:locale"]', locale === "tr" ? "tr_TR" : "en_US");
+
     // brand accent
     document.querySelectorAll('[data-i18n="brand.accent"]').forEach(function (n) {
       n.textContent = SITE.brand.logoAccent;
