@@ -68,7 +68,7 @@
       "id": "documents",
       "eyebrow": "Documents & Resources",
       "title": "Access our compliance documents",
-      "description": "You can download the accessible ones among the documents below.",
+      "description": "You can download ISO certificates directly and request all other documents.",
       "requestNote": "",
       "items": [
         {
@@ -95,35 +95,35 @@
         {
           "name": "Information Security Policy",
           "type": "PDF",
-          "access": "public",
+          "access": "request",
           "url": "assets/docs/information-security-policy-en.pdf",
           "downloadName": "Datassist-Information Security Policy"
         },
         {
           "name": "KVKK Data Retention & Disposal Policy",
           "type": "PDF",
-          "access": "public",
+          "access": "request",
           "url": "assets/docs/kvkk-retention-en.pdf",
           "downloadName": "Datassist-KVKK Data Retention & Disposal Policy"
         },
         {
           "name": "KVKK Data Processing & Protection Policy",
           "type": "PDF",
-          "access": "public",
+          "access": "request",
           "url": "assets/docs/kvkk-processing-en.pdf",
           "downloadName": "Datassist-KVKK Data Processing & Protection Policy"
         },
         {
           "name": "Business Continuity Plan",
           "type": "PDF",
-          "access": "public",
+          "access": "request",
           "url": "assets/docs/business-continuity-en.pdf",
           "downloadName": "Datassist-Business Continuity Plan"
         },
         {
           "name": "Disaster Recovery Plan",
           "type": "PDF",
-          "access": "public",
+          "access": "request",
           "url": "assets/docs/disaster-recovery-en.pdf",
           "downloadName": "Datassist-Disaster Recovery Plan"
         },
