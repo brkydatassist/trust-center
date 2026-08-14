@@ -74,70 +74,52 @@
         {
           "name": "ISO 27001:2022 Sertifikası",
           "type": "PDF",
-          "access": "request",
-          "url": "assets/docs/iso-27001-tr.pdf",
-          "downloadName": "Datassist-ISO27001 Sertifikası"
+          "access": "request"
         },
         {
           "name": "ISO 9001:2015 Sertifikası",
           "type": "PDF",
-          "access": "request",
-          "url": "assets/docs/iso-9001-tr.pdf",
-          "downloadName": "Datassist-ISO9001 Sertifikası"
+          "access": "request"
         },
         {
           "name": "ISO 14001:2015 Sertifikası",
           "type": "PDF",
-          "access": "request",
-          "url": "assets/docs/iso-14001-tr.pdf",
-          "downloadName": "Datassist-ISO14001 Sertifikası"
+          "access": "request"
         },
         {
           "name": "Bilgi Güvenliği Politikası",
           "type": "PDF",
-          "access": "request",
-          "url": "assets/docs/bilgi-guvenligi-politikasi-tr.pdf",
-          "downloadName": "Datassist-Bilgi Güvenliği Politikası"
+          "access": "request"
         },
         {
           "name": "KVKK Saklama ve İmha Politikası",
           "type": "PDF",
-          "access": "request",
-          "url": "assets/docs/kvkk-saklama-imha-tr.pdf",
-          "downloadName": "Datassist-KVKK Saklama ve İmha Politikası"
+          "access": "request"
         },
         {
           "name": "KVKK İşleme ve Koruma Politikası",
           "type": "PDF",
-          "access": "request",
-          "url": "assets/docs/kvkk-isleme-koruma-tr.pdf",
-          "downloadName": "Datassist-KVKK İşleme ve Koruma Politikası"
+          "access": "request"
         },
         {
           "name": "İş Sürekliliği Planı",
           "type": "PDF",
-          "access": "request",
-          "url": "assets/docs/is-plani-tr.pdf",
-          "downloadName": "Datassist-İş Sürekliliği Planı"
+          "access": "request"
         },
         {
           "name": "Felaket Kurtarma Planı",
           "type": "PDF",
-          "access": "request",
-          "url": "assets/docs/felaket-kurtarma-tr.pdf",
-          "downloadName": "Datassist-Felaket Kurtarma Planı"
+          "access": "request"
         },
         {
           "name": "ISAE 3402 SOC Denetim Raporu",
           "type": "PDF",
-          "access": "request",
-          "url": "assets/docs/isae-3402-soc-tr.pdf"
+          "access": "request"
         },
         {
           "name": "Penetrasyon Testi Raporu",
           "type": "PDF",
-          "access": "request",
-          "url": "assets/docs/pentest-tr.pdf"
+          "access": "request"
         }
       ],
       "labels": {
@@ -151,10 +133,6 @@
         "consentSuffix": "ni okudum ve kabul ediyorum.",
         "agreementDownload": "Sözleşmeyi indir",
         "agreementClose": "Kapat"
-      },
-      "agreement": {
-        "title": "Gizlilik Sözleşmesi (NDA)",
-        "url": "assets/docs/nda-tr.pdf"
       },
       "requestInfo": "Bu belge şirketinizdeki yetkili kişilerce Datassist ekibinden talep edilmelidir."
     },
