@@ -68,7 +68,7 @@
       "id": "documents",
       "eyebrow": "Belgeler & Kaynaklar",
       "title": "Uyumluluk belgelerimize erişin",
-      "description": "Aşağıdaki belgeler içerisinde erişime açık olanları indirebilirsiniz.",
+      "description": "ISO sertifikalarını doğrudan indirebilir, diğer belgeler için talep oluşturabilirsiniz.",
       "requestNote": "",
       "items": [
         {
@@ -95,35 +95,35 @@
         {
           "name": "Bilgi Güvenliği Politikası",
           "type": "PDF",
-          "access": "public",
+          "access": "request",
           "url": "assets/docs/bilgi-guvenligi-politikasi-tr.pdf",
           "downloadName": "Datassist-Bilgi Güvenliği Politikası"
         },
         {
           "name": "KVKK Saklama ve İmha Politikası",
           "type": "PDF",
-          "access": "public",
+          "access": "request",
           "url": "assets/docs/kvkk-saklama-imha-tr.pdf",
           "downloadName": "Datassist-KVKK Saklama ve İmha Politikası"
         },
         {
           "name": "KVKK İşleme ve Koruma Politikası",
           "type": "PDF",
-          "access": "public",
+          "access": "request",
           "url": "assets/docs/kvkk-isleme-koruma-tr.pdf",
           "downloadName": "Datassist-KVKK İşleme ve Koruma Politikası"
         },
         {
           "name": "İş Sürekliliği Planı",
           "type": "PDF",
-          "access": "public",
+          "access": "request",
           "url": "assets/docs/is-plani-tr.pdf",
           "downloadName": "Datassist-İş Sürekliliği Planı"
         },
         {
           "name": "Felaket Kurtarma Planı",
           "type": "PDF",
-          "access": "public",
+          "access": "request",
           "url": "assets/docs/felaket-kurtarma-tr.pdf",
           "downloadName": "Datassist-Felaket Kurtarma Planı"
         },
